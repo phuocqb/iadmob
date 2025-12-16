@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Điều khoản sử dụng | Ad Earnings for AdMob</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0b1222;
+      --card: #0f172a;
+      --card-strong: #0b1a36;
+      --text: #e8edf7;
+      --muted: #9aacc3;
+      --accent: #00c896;
+      --accent-2: #f5a524;
+      --shadow: 0 18px 50px rgba(0, 0, 0, 0.28);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Space Grotesk', 'Inter', system-ui, -apple-system, sans-serif;
+      background: radial-gradient(120% 120% at 10% 10%, rgba(0, 200, 150, 0.08), transparent),
+                  radial-gradient(120% 120% at 80% 0%, rgba(245, 165, 36, 0.1), transparent),
+                  var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(10px);
+      background: rgba(11, 18, 34, 0.8);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+    nav {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 18px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 600;
+      letter-spacing: 0.4px;
+      color: var(--text);
+    }
+    .badge {
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      color: #0b1222;
+      font-size: 12px;
+      padding: 4px 9px;
+      border-radius: 999px;
+      font-weight: 700;
+    }
+    .nav-actions a {
+      color: var(--text);
+      font-weight: 500;
+      padding: 10px 14px;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      transition: transform 160ms ease, border-color 160ms ease;
+    }
+    .nav-actions a:hover {
+      transform: translateY(-1px);
+      border-color: rgba(255, 255, 255, 0.18);
+    }
+    .hero {
+      max-width: 1080px;
+      margin: 48px auto 32px;
+      padding: 0 20px;
+      display: grid;
+      gap: 18px;
+      grid-template-columns: 1.1fr 0.9fr;
+      align-items: center;
+    }
+    .hero-card {
+      background: linear-gradient(145deg, var(--card), var(--card-strong));
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 20px;
+      padding: 28px;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-card::after {
+      content: '';
+      position: absolute;
+      width: 320px;
+      height: 320px;
+      background: radial-gradient(circle, rgba(0, 200, 150, 0.16), transparent 55%);
+      top: -120px;
+      right: -120px;
+      filter: blur(8px);
+    }
+    h1 {
+      margin: 0 0 12px;
+      font-size: 32px;
+      line-height: 1.2;
+    }
+    .subtitle {
+      margin: 0 0 16px;
+      color: var(--muted);
+    }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(0, 200, 150, 0.12);
+      color: var(--accent);
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 14px;
+      border: 1px solid rgba(0, 200, 150, 0.28);
+    }
+    main {
+      max-width: 1080px;
+      margin: 0 auto 60px;
+      padding: 0 20px;
+      display: grid;
+      gap: 18px;
+    }
+    section {
+      background: var(--card);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 18px;
+      padding: 20px 22px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.18);
+    }
+    section h2 {
+      margin: 0 0 10px;
+      font-size: 20px;
+    }
+    section p {
+      margin: 8px 0;
+      color: var(--muted);
+    }
+    ul {
+      margin: 10px 0 0 18px;
+      padding: 0;
+      color: var(--muted);
+    }
+    li { margin-bottom: 8px; }
+    .footnote {
+      font-size: 14px;
+      color: var(--muted);
+      text-align: center;
+      padding: 18px 0 28px;
+    }
+    @media (max-width: 900px) {
+      .hero { grid-template-columns: 1fr; margin-top: 32px; }
+    }
+    @media (max-width: 640px) {
+      nav { padding: 14px 16px; }
+      .hero-card { padding: 22px; }
+      h1 { font-size: 26px; }
+      section { padding: 18px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="brand">
+        <span class="badge">Ad Earnings</span>
+        <span>Điều khoản sử dụng</span>
+      </div>
+      <div class="nav-actions">
+        <a href="privacy.html">Xem Chính sách quyền riêng tư</a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-card">
+      <div class="pill">Cập nhật lần cuối: 16/12/2025</div>
+      <h1>Điều khoản sử dụng cho Ad Earnings for AdMob</h1>
+      <p class="subtitle">
+        Cảm ơn bạn đã tin dùng Ad Earnings for AdMob. Việc sử dụng ứng dụng đồng nghĩa bạn đồng ý tuân theo các điều khoản dưới đây.
+      </p>
+      <p class="subtitle">
+        Vui lòng đọc kỹ để hiểu rõ quyền và nghĩa vụ của bạn khi truy cập và sử dụng các tính năng theo dõi doanh thu quảng cáo của chúng tôi.
+      </p>
+    </div>
+  </section>
+
+  <main>
+    <section>
+      <h2>1. Chấp thuận và phạm vi áp dụng</h2>
+      <p>Điều khoản này điều chỉnh việc sử dụng ứng dụng Ad Earnings for AdMob (“Ứng dụng”). Khi đăng nhập hoặc tiếp tục sử dụng, bạn xác nhận đã đọc, hiểu và đồng ý tuân thủ toàn bộ điều khoản.</p>
+      <p>Ứng dụng chủ yếu phục vụ nhà phát triển/đối tác quản lý doanh thu quảng cáo AdMob. Nếu bạn không đồng ý với bất kỳ nội dung nào, vui lòng ngừng sử dụng Ứng dụng.</p>
+    </section>
+
+    <section>
+      <h2>2. Điều kiện sử dụng</h2>
+      <ul>
+        <li>Bạn phải đủ quyền truy cập hợp pháp vào tài khoản AdMob liên kết.</li>
+        <li>Thông tin đăng nhập và quyền truy cập API/SDK phải do bạn tự chịu trách nhiệm bảo vệ.</li>
+        <li>Bạn cam kết cung cấp thông tin chính xác, không giả mạo danh tính hoặc dữ liệu.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>3. Quyền và trách nhiệm của bạn</h2>
+      <ul>
+        <li>Sử dụng Ứng dụng cho mục đích quản lý và theo dõi doanh thu quảng cáo của riêng bạn.</li>
+        <li>Không can thiệp, đảo ngược hoặc khai thác mã nguồn, API hoặc hạ tầng của Ứng dụng.</li>
+        <li>Không sử dụng Ứng dụng cho mục đích bất hợp pháp, gian lận hoặc xâm phạm quyền của bên thứ ba.</li>
+        <li>Đảm bảo thiết bị có kết nối internet an toàn và tuân thủ chính sách của Google/AdMob.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>4. Quyền sở hữu và giấy phép</h2>
+      <p>Mọi nội dung, thiết kế, mã nguồn và tài sản trí tuệ thuộc về nhóm phát triển Ad Earnings for AdMob hoặc đối tác cấp phép. Bạn được cấp quyền sử dụng cá nhân, không độc quyền và không thể chuyển nhượng để truy cập Ứng dụng theo đúng điều khoản này.</p>
+    </section>
+
+    <section>
+      <h2>5. Dữ liệu và độ chính xác</h2>
+      <p>Ứng dụng hiển thị dữ liệu doanh thu và hiệu suất dựa trên nguồn AdMob/Google. Chúng tôi nỗ lực đảm bảo tính chính xác nhưng không bảo đảm tuyệt đối do phụ thuộc vào dữ liệu bên thứ ba, độ trễ đồng bộ hoặc thay đổi từ nhà cung cấp.</p>
+    </section>
+
+    <section>
+      <h2>6. Thanh toán và phí</h2>
+      <p>Nếu có gói trả phí, thông tin giá và phạm vi tính năng sẽ được thông báo rõ. Các khoản phí đã thanh toán có thể không được hoàn lại trừ khi luật pháp yêu cầu. Bạn chịu trách nhiệm các khoản phí dịch vụ bên thứ ba (ví dụ: phí chuyển đổi ngoại tệ) nếu phát sinh.</p>
+    </section>
+
+    <section>
+      <h2>7. Giới hạn trách nhiệm</h2>
+      <ul>
+        <li>Ứng dụng được cung cấp “như hiện có”, không bảo đảm không lỗi hoặc không gián đoạn.</li>
+        <li>Chúng tôi không chịu trách nhiệm cho tổn thất gián tiếp, mất dữ liệu hoặc lợi nhuận do việc sử dụng Ứng dụng.</li>
+        <li>Trách nhiệm tối đa (nếu có) sẽ giới hạn trong phạm vi khoản phí bạn đã thanh toán cho kỳ sử dụng gần nhất.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>8. Chấm dứt sử dụng</h2>
+      <p>Chúng tôi có thể tạm ngưng hoặc chấm dứt quyền truy cập nếu bạn vi phạm điều khoản, thực hiện hành vi gian lận, gây nguy cơ bảo mật, hoặc theo yêu cầu của pháp luật/bên cung cấp dịch vụ (ví dụ: Google/AdMob). Sau khi chấm dứt, bạn phải ngừng sử dụng và xóa Ứng dụng nếu được yêu cầu.</p>
+    </section>
+
+    <section>
+      <h2>9. Thay đổi điều khoản</h2>
+      <p>Điều khoản có thể được cập nhật để phản ánh thay đổi tính năng, pháp lý hoặc yêu cầu vận hành. Chúng tôi sẽ thông báo trong Ứng dụng hoặc qua email đã đăng ký. Việc tiếp tục sử dụng sau cập nhật đồng nghĩa bạn chấp nhận điều khoản mới.</p>
+    </section>
+
+    <section>
+      <h2>10. Liên hệ</h2>
+      <p>Nếu có câu hỏi về Điều khoản sử dụng, vui lòng liên hệ: <a href="mailto:support@adearnings.app">support@adearnings.app</a>.</p>
+    </section>
+
+    <div class="footnote">
+      Ứng dụng hỗ trợ bạn theo dõi doanh thu AdMob một cách minh bạch. Hãy luôn bảo vệ tài khoản và dữ liệu của bạn.
+    </div>
+  </main>
+</body>
+</html>

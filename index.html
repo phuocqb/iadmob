@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hỗ trợ | Ad Earnings for AdMob</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0b1222;
+      --card: #0f172a;
+      --card-strong: #0b1a36;
+      --text: #e8edf7;
+      --muted: #9aacc3;
+      --accent: #00c896;
+      --accent-2: #f5a524;
+      --shadow: 0 18px 50px rgba(0, 0, 0, 0.28);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Space Grotesk', 'Inter', system-ui, -apple-system, sans-serif;
+      background: radial-gradient(120% 120% at 10% 10%, rgba(0, 200, 150, 0.08), transparent),
+                  radial-gradient(120% 120% at 80% 0%, rgba(245, 165, 36, 0.1), transparent),
+                  var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(10px);
+      background: rgba(11, 18, 34, 0.8);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+    nav {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 18px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 600;
+      letter-spacing: 0.4px;
+      color: var(--text);
+    }
+    .badge {
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      color: #0b1222;
+      font-size: 12px;
+      padding: 4px 9px;
+      border-radius: 999px;
+      font-weight: 700;
+    }
+    .nav-actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .nav-actions a {
+      color: var(--text);
+      font-weight: 500;
+      padding: 10px 14px;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      transition: transform 160ms ease, border-color 160ms ease;
+    }
+    .nav-actions a:hover {
+      transform: translateY(-1px);
+      border-color: rgba(255, 255, 255, 0.18);
+    }
+    .hero {
+      max-width: 1080px;
+      margin: 48px auto 32px;
+      padding: 0 20px;
+      display: grid;
+      gap: 18px;
+      grid-template-columns: 1fr;
+      align-items: center;
+    }
+    .hero-card {
+      background: linear-gradient(145deg, var(--card), var(--card-strong));
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 20px;
+      padding: 28px;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-card::after {
+      content: '';
+      position: absolute;
+      width: 320px;
+      height: 320px;
+      background: radial-gradient(circle, rgba(0, 200, 150, 0.16), transparent 55%);
+      top: -120px;
+      right: -120px;
+      filter: blur(8px);
+    }
+    h1 {
+      margin: 0 0 12px;
+      font-size: 32px;
+      line-height: 1.2;
+    }
+    .subtitle {
+      margin: 0 0 16px;
+      color: var(--muted);
+    }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(0, 200, 150, 0.12);
+      color: var(--accent);
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 14px;
+      border: 1px solid rgba(0, 200, 150, 0.28);
+    }
+    .cta-row {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 16px;
+    }
+    .cta {
+      padding: 12px 16px;
+      border-radius: 12px;
+      font-weight: 600;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: rgba(255, 255, 255, 0.04);
+      color: var(--text);
+      display: inline-flex;
+      gap: 8px;
+      align-items: center;
+      transition: transform 150ms ease, border-color 150ms ease;
+    }
+    .cta.primary {
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      color: #0b1222;
+      border: none;
+    }
+    .cta:hover { transform: translateY(-1px); border-color: rgba(255, 255, 255, 0.18); }
+    main {
+      max-width: 1080px;
+      margin: 0 auto 60px;
+      padding: 0 20px;
+      display: grid;
+      gap: 18px;
+    }
+    section {
+      background: var(--card);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 18px;
+      padding: 20px 22px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.18);
+    }
+    section h2 {
+      margin: 0 0 10px;
+      font-size: 20px;
+    }
+    section p {
+      margin: 8px 0;
+      color: var(--muted);
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 14px;
+      margin-top: 12px;
+    }
+    .card {
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 14px;
+      padding: 16px;
+    }
+    .label {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      color: var(--accent);
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(0, 200, 150, 0.12);
+      border: 1px solid rgba(0, 200, 150, 0.22);
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+    ul {
+      margin: 10px 0 0 18px;
+      padding: 0;
+      color: var(--muted);
+    }
+    li { margin-bottom: 8px; }
+    .footnote {
+      font-size: 14px;
+      color: var(--muted);
+      text-align: center;
+      padding: 18px 0 28px;
+    }
+    @media (max-width: 900px) {
+      .hero { grid-template-columns: 1fr; margin-top: 32px; }
+    }
+    @media (max-width: 640px) {
+      nav { padding: 14px 16px; }
+      .hero-card { padding: 22px; }
+      h1 { font-size: 26px; }
+      section { padding: 18px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="brand">
+        <span class="badge">Ad Earnings</span>
+        <span>Hỗ trợ</span>
+      </div>
+      <div class="nav-actions">
+        <a href="privacy.html">Chính sách quyền riêng tư</a>
+        <a href="terms.html">Điều khoản sử dụng</a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-card">
+      <div class="pill">Trung tâm hỗ trợ • Cập nhật: 16/12/2025</div>
+      <h1>Hỗ trợ cho Ad Earnings for AdMob</h1>
+      <p class="subtitle">
+        Chúng tôi luôn sẵn sàng trợ giúp bạn theo dõi doanh thu AdMob an toàn, nhanh chóng và minh bạch.
+      </p>
+      <div class="cta-row">
+        <a class="cta primary" href="mailto:support@adearnings.app">Liên hệ: support@adearnings.app</a>
+        <a class="cta" href="privacy.html">Xem Chính sách quyền riêng tư</a>
+        <a class="cta" href="terms.html">Xem Điều khoản sử dụng</a>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <section>
+      <h2>Làm thế nào để nhận hỗ trợ?</h2>
+      <div class="grid">
+        <div class="card">
+          <div class="label">Email chính</div>
+          <p>Gửi mô tả vấn đề, ảnh chụp màn hình (nếu có) tới <a href="mailto:support@adearnings.app">support@adearnings.app</a>. Chúng tôi phản hồi trong vòng 1-2 ngày làm việc.</p>
+        </div>
+        <div class="card">
+          <div class="label">Thông tin nên kèm</div>
+          <ul>
+            <li>Thiết bị, phiên bản iOS/Android và phiên bản ứng dụng.</li>
+            <li>Thao tác đã thực hiện và thông báo lỗi hiển thị.</li>
+            <li>Thời điểm xảy ra và tần suất (lần đầu hay lặp lại).</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="label">Thời gian hỗ trợ</div>
+          <p>Giờ làm việc: 09:00 – 18:00 (GMT+7), từ Thứ Hai đến Thứ Sáu. Các yêu cầu khẩn cấp về truy cập/đăng nhập được ưu tiên.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Câu hỏi thường gặp</h2>
+      <div class="grid">
+        <div class="card">
+          <div class="label">Dữ liệu hiển thị chậm?</div>
+          <p>Dữ liệu AdMob có thể trễ vài giờ do quá trình đồng bộ từ Google. Hãy kiểm tra lại sau hoặc làm mới trong ứng dụng.</p>
+        </div>
+        <div class="card">
+          <div class="label">Không đăng nhập được?</div>
+          <p>Đảm bảo tài khoản Google có quyền AdMob phù hợp. Thử đăng xuất và đăng nhập lại; nếu vẫn lỗi, gửi ảnh chụp màn hình cho chúng tôi.</p>
+        </div>
+        <div class="card">
+          <div class="label">Bảo mật & quyền riêng tư</div>
+          <p>Chúng tôi chỉ sử dụng quyền truy cập để hiển thị số liệu doanh thu. Chi tiết được nêu trong <a href="privacy.html">Chính sách quyền riêng tư</a>.</p>
+        </div>
+        <div class="card">
+          <div class="label">Xuất báo cáo</div>
+          <p>Bạn có thể xuất số liệu ra CSV từ màn hình thống kê. Nếu gặp lỗi định dạng, gửi file mẫu để chúng tôi kiểm tra.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Liên hệ bổ sung</h2>
+      <p>Email chính thức: <a href="mailto:support@adearnings.app">support@adearnings.app</a></p>
+      <p>Nếu bạn cần yêu cầu xóa dữ liệu hoặc câu hỏi pháp lý, vui lòng tham khảo thêm tại <a href="privacy.html">Chính sách quyền riêng tư</a> và <a href="terms.html">Điều khoản sử dụng</a>.</p>
+    </section>
+
+    <div class="footnote">
+      Ad Earnings for AdMob hỗ trợ bạn theo dõi và hiểu rõ doanh thu quảng cáo. Mọi phản hồi đều giúp chúng tôi cải thiện sản phẩm tốt hơn cho cộng đồng nhà phát triển.
+    </div>
+  </main>
+</body>
+</html>
